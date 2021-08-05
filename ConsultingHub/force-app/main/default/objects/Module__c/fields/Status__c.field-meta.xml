@@ -12,8 +12,13 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Not Started</fullName>
+                <fullName>Previously Completed</fullName>
                 <default>false</default>
+                <label>Previously Completed</label>
+            </value>
+            <value>
+                <fullName>Not Started</fullName>
+                <default>true</default>
                 <label>Not Started</label>
             </value>
             <value>
@@ -25,11 +30,6 @@
                 <fullName>Completed</fullName>
                 <default>false</default>
                 <label>Completed</label>
-            </value>
-            <value>
-                <fullName>Previously Completed</fullName>
-                <default>false</default>
-                <label>Previously Completed</label>
             </value>
         </valueSetDefinition>
     </valueSet>
