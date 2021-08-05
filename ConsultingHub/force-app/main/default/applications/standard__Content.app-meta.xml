@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-Workspace</tabs>
+    <tabs>standard-ContentSearch</tabs>
+    <tabs>standard-ContentSubscriptions</tabs>
+    <tabs>ia_Engagement_Type__c</tabs>
+    <tabs>ia_Phase__c</tabs>
+    <tabs>ia_Engagement__c</tabs>
+    <tabs>ia_Deliverable__c</tabs>
+    <tabs>ia_Engagement_Value__c</tabs>
+    <tabs>Product_Feature__c</tabs>
+    <tabs>Stage_Activity__c</tabs>
+    <tabs>Stakeholder__c</tabs>
+    <tabs>RACI__c</tabs>
+    <tabs>Engagement_Activity__c</tabs>
+</CustomApplication>

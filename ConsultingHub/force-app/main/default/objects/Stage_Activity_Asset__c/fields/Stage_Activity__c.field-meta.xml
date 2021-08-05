@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Activity__c</fullName>
+    <externalId>false</externalId>
+    <label>Stage Activity</label>
+    <referenceTo>Stage_Activity__c</referenceTo>
+    <relationshipLabel>Stage Activity Assets</relationshipLabel>
+    <relationshipName>Stage_Activity_Assets</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Area__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Area</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Einstein Analytics</fullName>
+                <default>false</default>
+                <label>Einstein Analytics</label>
+            </value>
+            <value>
+                <fullName>Einstein Discovery</fullName>
+                <default>false</default>
+                <label>Einstein Discovery</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>Service Delivery</fullName>
+                <default>false</default>
+                <label>Service Delivery</label>
+            </value>
+            <value>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+                <label>Chatter</label>
+            </value>
+            <value>
+                <fullName>DXP (Digital Experience Platform)</fullName>
+                <default>false</default>
+                <label>DXP (Digital Experience Platform)</label>
+            </value>
+            <value>
+                <fullName>Partner Experience Management</fullName>
+                <default>false</default>
+                <label>Partner Experience Management</label>
+            </value>
+            <value>
+                <fullName>Self Service Communities</fullName>
+                <default>false</default>
+                <label>Self Service Communities</label>
+            </value>
+            <value>
+                <fullName>Einstein Platform</fullName>
+                <default>false</default>
+                <label>Einstein Platform</label>
+            </value>
+            <value>
+                <fullName>Einstein Prediction Builder</fullName>
+                <default>false</default>
+                <label>Einstein Prediction Builder</label>
+            </value>
+            <value>
+                <fullName>Customer Experience</fullName>
+                <default>false</default>
+                <label>Customer Experience</label>
+            </value>
+            <value>
+                <fullName>Dispatch Management</fullName>
+                <default>false</default>
+                <label>Dispatch Management</label>
+            </value>
+            <value>
+                <fullName>Lightning Scheduler</fullName>
+                <default>false</default>
+                <label>Lightning Scheduler</label>
+            </value>
+            <value>
+                <fullName>Mobile Experience &amp; Apps</fullName>
+                <default>false</default>
+                <label>Mobile Experience &amp; Apps</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Products, Assets, &amp; Inventory</fullName>
+                <default>false</default>
+                <label>Products, Assets, &amp; Inventory</label>
+            </value>
+            <value>
+                <fullName>Resource &amp; Time Management</fullName>
+                <default>false</default>
+                <label>Resource &amp; Time Management</label>
+            </value>
+            <value>
+                <fullName>Scheduling &amp; Optimization</fullName>
+                <default>false</default>
+                <label>Scheduling &amp; Optimization</label>
+            </value>
+            <value>
+                <fullName>Service Contracts &amp; Entitlements</fullName>
+                <default>false</default>
+                <label>Service Contracts &amp; Entitlements</label>
+            </value>
+            <value>
+                <fullName>Work Management</fullName>
+                <default>false</default>
+                <label>Work Management</label>
+            </value>
+            <value>
+                <fullName>Advertising Studio</fullName>
+                <default>false</default>
+                <label>Advertising Studio</label>
+            </value>
+            <value>
+                <fullName>Analytics Builder</fullName>
+                <default>false</default>
+                <label>Analytics Builder</label>
+            </value>
+            <value>
+                <fullName>Audience Builder</fullName>
+                <default>false</default>
+                <label>Audience Builder</label>
+            </value>
+            <value>
+                <fullName>Audience Studio</fullName>
+                <default>false</default>
+                <label>Audience Studio</label>
+            </value>
+            <value>
+                <fullName>Automation Studio</fullName>
+                <default>false</default>
+                <label>Automation Studio</label>
+            </value>
+            <value>
+                <fullName>Content Builder</fullName>
+                <default>false</default>
+                <label>Content Builder</label>
+            </value>
+            <value>
+                <fullName>Distributed Marketing</fullName>
+                <default>false</default>
+                <label>Distributed Marketing</label>
+            </value>
+            <value>
+                <fullName>Email Studio</fullName>
+                <default>false</default>
+                <label>Email Studio</label>
+            </value>
+            <value>
+                <fullName>Google Analytics</fullName>
+                <default>false</default>
+                <label>Google Analytics</label>
+            </value>
+            <value>
+                <fullName>Interaction Studio</fullName>
+                <default>false</default>
+                <label>Interaction Studio</label>
+            </value>
+            <value>
+                <fullName>Journey Builder</fullName>
+                <default>false</default>
+                <label>Journey Builder</label>
+            </value>
+            <value>
+                <fullName>Marketing Cloud Connect</fullName>
+                <default>false</default>
+                <label>Marketing Cloud Connect</label>
+            </value>
+            <value>
+                <fullName>Marketing Cloud Mobile App</fullName>
+                <default>false</default>
+                <label>Marketing Cloud Mobile App</label>
+            </value>
+            <value>
+                <fullName>Marketing Cloud Platform</fullName>
+                <default>false</default>
+                <label>Marketing Cloud Platform</label>
+            </value>
+            <value>
+                <fullName>MC Command Center</fullName>
+                <default>false</default>
+                <label>MC Command Center</label>
+            </value>
+            <value>
+                <fullName>MC Einstein</fullName>
+                <default>false</default>
+                <label>MC Einstein</label>
+            </value>
+            <value>
+                <fullName>Messaging Platform</fullName>
+                <default>false</default>
+                <label>Messaging Platform</label>
+            </value>
+            <value>
+                <fullName>Mobile Studio</fullName>
+                <default>false</default>
+                <label>Mobile Studio</label>
+            </value>
+            <value>
+                <fullName>Social Studio</fullName>
+                <default>false</default>
+                <label>Social Studio</label>
+            </value>
+            <value>
+                <fullName>Web Studio</fullName>
+                <default>false</default>
+                <label>Web Studio</label>
+            </value>
+            <value>
+                <fullName>Administration</fullName>
+                <default>false</default>
+                <label>Administration</label>
+            </value>
+            <value>
+                <fullName>Analytics &amp; Reporting</fullName>
+                <default>false</default>
+                <label>Analytics &amp; Reporting</label>
+            </value>
+            <value>
+                <fullName>Automation Tools</fullName>
+                <default>false</default>
+                <label>Automation Tools</label>
+            </value>
+            <value>
+                <fullName>Connectors</fullName>
+                <default>false</default>
+                <label>Connectors</label>
+            </value>
+            <value>
+                <fullName>Einstein for B2B Marketing</fullName>
+                <default>false</default>
+                <label>Einstein for B2B Marketing</label>
+            </value>
+            <value>
+                <fullName>Lead Nurturing</fullName>
+                <default>false</default>
+                <label>Lead Nurturing</label>
+            </value>
+            <value>
+                <fullName>Marketing &amp; Content Tools</fullName>
+                <default>false</default>
+                <label>Marketing &amp; Content Tools</label>
+            </value>
+            <value>
+                <fullName>Multiple Business Units/Brands</fullName>
+                <default>false</default>
+                <label>Multiple Business Units/Brands</label>
+            </value>
+            <value>
+                <fullName>Operations Support</fullName>
+                <default>false</default>
+                <label>Operations Support</label>
+            </value>
+            <value>
+                <fullName>Pardot Platform &amp; Architecture</fullName>
+                <default>false</default>
+                <label>Pardot Platform &amp; Architecture</label>
+            </value>
+            <value>
+                <fullName>Prospects</fullName>
+                <default>false</default>
+                <label>Prospects</label>
+            </value>
+            <value>
+                <fullName>Salesforce Engage</fullName>
+                <default>false</default>
+                <label>Salesforce Engage</label>
+            </value>
+            <value>
+                <fullName>Salesforce Integration</fullName>
+                <default>false</default>
+                <label>Salesforce Integration</label>
+            </value>
+            <value>
+                <fullName>Security &amp; Compliance</fullName>
+                <default>false</default>
+                <label>Security &amp; Compliance</label>
+            </value>
+            <value>
+                <fullName>ALM</fullName>
+                <default>false</default>
+                <label>ALM</label>
+            </value>
+            <value>
+                <fullName>Apex</fullName>
+                <default>false</default>
+                <label>Apex</label>
+            </value>
+            <value>
+                <fullName>API</fullName>
+                <default>false</default>
+                <label>API</label>
+            </value>
+            <value>
+                <fullName>Cache</fullName>
+                <default>false</default>
+                <label>Cache</label>
+            </value>
+            <value>
+                <fullName>Custom Schema</fullName>
+                <default>false</default>
+                <label>Custom Schema</label>
+            </value>
+            <value>
+                <fullName>Custom Settings</fullName>
+                <default>false</default>
+                <label>Custom Settings</label>
+            </value>
+            <value>
+                <fullName>Data Services</fullName>
+                <default>false</default>
+                <label>Data Services</label>
+            </value>
+            <value>
+                <fullName>Developer Tools</fullName>
+                <default>false</default>
+                <label>Developer Tools</label>
+            </value>
+            <value>
+                <fullName>EMP</fullName>
+                <default>false</default>
+                <label>EMP</label>
+            </value>
+            <value>
+                <fullName>Globalization</fullName>
+                <default>false</default>
+                <label>Globalization</label>
+            </value>
+            <value>
+                <fullName>Identity &amp; Authentication</fullName>
+                <default>false</default>
+                <label>Identity &amp; Authentication</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>ISVs</fullName>
+                <default>false</default>
+                <label>ISVs</label>
+            </value>
+            <value>
+                <fullName>License and Provisioning</fullName>
+                <default>false</default>
+                <label>License and Provisioning</label>
+            </value>
+            <value>
+                <fullName>Lightning Customization</fullName>
+                <default>false</default>
+                <label>Lightning Customization</label>
+            </value>
+            <value>
+                <fullName>Lightning Experience</fullName>
+                <default>false</default>
+                <label>Lightning Experience</label>
+            </value>
+            <value>
+                <fullName>Lightning Flow</fullName>
+                <default>false</default>
+                <label>Lightning Flow</label>
+            </value>
+            <value>
+                <fullName>Lightning Framework</fullName>
+                <default>false</default>
+                <label>Lightning Framework</label>
+            </value>
+            <value>
+                <fullName>Lightning Services</fullName>
+                <default>false</default>
+                <label>Lightning Services</label>
+            </value>
+            <value>
+                <fullName>Shield</fullName>
+                <default>false</default>
+                <label>Shield</label>
+            </value>
+            <value>
+                <fullName>Trailhead</fullName>
+                <default>false</default>
+                <label>Trailhead</label>
+            </value>
+            <value>
+                <fullName>User Administration</fullName>
+                <default>false</default>
+                <label>User Administration</label>
+            </value>
+            <value>
+                <fullName>Accounts &amp; Contacts</fullName>
+                <default>false</default>
+                <label>Accounts &amp; Contacts</label>
+            </value>
+            <value>
+                <fullName>Campaigns</fullName>
+                <default>false</default>
+                <label>Campaigns</label>
+            </value>
+            <value>
+                <fullName>Data.com</fullName>
+                <default>false</default>
+                <label>Data.com</label>
+            </value>
+            <value>
+                <fullName>Dedupe</fullName>
+                <default>false</default>
+                <label>Dedupe</label>
+            </value>
+            <value>
+                <fullName>Email Clients &amp; Office Suites</fullName>
+                <default>false</default>
+                <label>Email Clients &amp; Office Suites</label>
+            </value>
+            <value>
+                <fullName>Forecasting &amp; Territory Management</fullName>
+                <default>false</default>
+                <label>Forecasting &amp; Territory Management</label>
+            </value>
+            <value>
+                <fullName>HVS</fullName>
+                <default>false</default>
+                <label>HVS</label>
+            </value>
+            <value>
+                <fullName>Leads</fullName>
+                <default>false</default>
+                <label>Leads</label>
+            </value>
+            <value>
+                <fullName>Lightning Data</fullName>
+                <default>false</default>
+                <label>Lightning Data</label>
+            </value>
+            <value>
+                <fullName>Opportunities &amp; Quotes</fullName>
+                <default>false</default>
+                <label>Opportunities &amp; Quotes</label>
+            </value>
+            <value>
+                <fullName>Person Accounts</fullName>
+                <default>false</default>
+                <label>Person Accounts</label>
+            </value>
+            <value>
+                <fullName>Sales Cloud</fullName>
+                <default>false</default>
+                <label>Sales Cloud</label>
+            </value>
+            <value>
+                <fullName>Sales Cloud Einstein</fullName>
+                <default>false</default>
+                <label>Sales Cloud Einstein</label>
+            </value>
+            <value>
+                <fullName>Sales Cloud Essentials</fullName>
+                <default>false</default>
+                <label>Sales Cloud Essentials</label>
+            </value>
+            <value>
+                <fullName>Sales Productivity</fullName>
+                <default>false</default>
+                <label>Sales Productivity</label>
+            </value>
+            <value>
+                <fullName>Salesforce Billing</fullName>
+                <default>false</default>
+                <label>Salesforce Billing</label>
+            </value>
+            <value>
+                <fullName>Salesforce CPQ &amp; Billing</fullName>
+                <default>false</default>
+                <label>Salesforce CPQ &amp; Billing</label>
+            </value>
+            <value>
+                <fullName>SalesforceIQ CRM</fullName>
+                <default>false</default>
+                <label>SalesforceIQ CRM</label>
+            </value>
+            <value>
+                <fullName>Work.com</fullName>
+                <default>false</default>
+                <label>Work.com</label>
+            </value>
+            <value>
+                <fullName>Federated Search</fullName>
+                <default>false</default>
+                <label>Federated Search</label>
+            </value>
+            <value>
+                <fullName>Lookups</fullName>
+                <default>false</default>
+                <label>Lookups</label>
+            </value>
+            <value>
+                <fullName>Other Search</fullName>
+                <default>false</default>
+                <label>Other Search</label>
+            </value>
+            <value>
+                <fullName>Relevance</fullName>
+                <default>false</default>
+                <label>Relevance</label>
+            </value>
+            <value>
+                <fullName>Search Back End</fullName>
+                <default>false</default>
+                <label>Search Back End</label>
+            </value>
+            <value>
+                <fullName>Search UI</fullName>
+                <default>false</default>
+                <label>Search UI</label>
+            </value>
+            <value>
+                <fullName>Agent Experience</fullName>
+                <default>false</default>
+                <label>Agent Experience</label>
+            </value>
+            <value>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+                <label>Case Management</label>
+            </value>
+            <value>
+                <fullName>Chat</fullName>
+                <default>false</default>
+                <label>Chat</label>
+            </value>
+            <value>
+                <fullName>Desk.com</fullName>
+                <default>false</default>
+                <label>Desk.com</label>
+            </value>
+            <value>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+                <label>E-Commerce</label>
+            </value>
+            <value>
+                <fullName>Einstein</fullName>
+                <default>false</default>
+                <label>Einstein</label>
+            </value>
+            <value>
+                <fullName>ITIL/ITSM/HR</fullName>
+                <default>false</default>
+                <label>ITIL/ITSM/HR</label>
+            </value>
+            <value>
+                <fullName>Knowledge</fullName>
+                <default>false</default>
+                <label>Knowledge</label>
+            </value>
+            <value>
+                <fullName>Messaging</fullName>
+                <default>false</default>
+                <label>Messaging</label>
+            </value>
+            <value>
+                <fullName>Omni-Channel</fullName>
+                <default>false</default>
+                <label>Omni-Channel</label>
+            </value>
+            <value>
+                <fullName>Platform</fullName>
+                <default>false</default>
+                <label>Platform</label>
+            </value>
+            <value>
+                <fullName>Service Cloud Mobile App</fullName>
+                <default>false</default>
+                <label>Service Cloud Mobile App</label>
+            </value>
+            <value>
+                <fullName>Service Cloud Voice</fullName>
+                <default>false</default>
+                <label>Service Cloud Voice</label>
+            </value>
+            <value>
+                <fullName>Service Setup &amp; Admin</fullName>
+                <default>false</default>
+                <label>Service Setup &amp; Admin</label>
+            </value>
+            <value>
+                <fullName>Service Trial Experience</fullName>
+                <default>false</default>
+                <label>Service Trial Experience</label>
+            </value>
+            <value>
+                <fullName>Snap-ins</fullName>
+                <default>false</default>
+                <label>Snap-ins</label>
+            </value>
+            <value>
+                <fullName>Social Customer Service</fullName>
+                <default>false</default>
+                <label>Social Customer Service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

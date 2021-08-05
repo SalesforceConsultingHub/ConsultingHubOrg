@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Actual_Time_Spent_Hours__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Actual Time Spent (Hours)</label>
+    <summarizedField>Module__c.Actual_Hours_Spent__c</summarizedField>
+    <summaryFilterItems>
+        <field>Module__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Completed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Module__c.Onboarding__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

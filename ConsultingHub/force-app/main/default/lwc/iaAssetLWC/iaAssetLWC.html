@@ -1,0 +1,18 @@
+<template>
+    <lightning-card class="slds-text-body_regular" title="IA Assets" icon-name="custom:custom13">
+      <template if:true={assetsAvailable}>
+        <template if:true={assets}>
+          <lightning-datatable
+            key-field="Id"
+            hide-checkbox-column
+            data={assets}
+            columns={columns}
+          >
+          </lightning-datatable>
+        </template>
+      </template>
+      <template if:false={assetsAvailable}>
+        <div class="slds-card__body slds-card__body_inner slds-align_absolute-center">{noIA}</div>
+      </template>
+    </lightning-card>
+</template>

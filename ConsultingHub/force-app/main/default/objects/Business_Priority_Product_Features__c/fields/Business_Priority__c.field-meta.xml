@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Priority__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Priority</label>
+    <referenceTo>Business_Priorities__c</referenceTo>
+    <relationshipLabel>Product Features</relationshipLabel>
+    <relationshipName>Business_Priority_Product_Features</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Select if this is Net new implementation or enhancement project or lightning migration</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select if this is Net new implementation or enhancement project or lightning migration</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IA</fullName>
+                <default>false</default>
+                <label>IA</label>
+            </value>
+            <value>
+                <fullName>Jump Start</fullName>
+                <default>false</default>
+                <label>Jump Start</label>
+            </value>
+            <value>
+                <fullName>Lightning Boost</fullName>
+                <default>false</default>
+                <label>Lightning Boost</label>
+            </value>
+            <value>
+                <fullName>SOW Project</fullName>
+                <default>false</default>
+                <label>SOW Project</label>
+            </value>
+            <value>
+                <fullName>TAM</fullName>
+                <default>false</default>
+                <label>TAM</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

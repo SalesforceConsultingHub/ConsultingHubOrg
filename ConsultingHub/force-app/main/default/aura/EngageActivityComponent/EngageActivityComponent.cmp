@@ -1,0 +1,124 @@
+<aura:component controller="EngageActivityController" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" >
+
+    <!--application event related info-->
+    
+    <!-- no need to pass the current stage to currentStageComponent anymore
+	     code in JS Controller have also been commented
+         waiting for confirmation on removing on completely removing currentStageComponent
+         event, main component which houses both engageactivitycomp and currentStageComponent
+	-->
+    <!--<aura:registerEvent name="appEvent" type="c:RefreshCurrentStageCompEvent"/>-->
+
+    <aura:attribute name="engActList" type="Engagement_Activity__c[]"/>
+    <aura:attribute name="currStgActList" type="Engagement_Activity__c[]"/>
+    <aura:attribute name="nextStgActList" type="Engagement_Activity__c[]"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="mycolumns2" type="List"/>
+    <aura:attribute name="mycolumns3" type="List"/>
+	<aura:attribute name="recordId" type="String"/>
+	<aura:attribute name="phasePicklistvalues" type="List" default ="[ ]"/>
+    <aura:attribute name="stagePicklistvalues" type="List" default ="[ ]"/>
+    <aura:attribute name="selectedRows" type="List" />
+    
+    <aura:attribute name="currentStage" type="String"/>
+    <aura:attribute name="nextStage" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <br/>
+	
+	<div class="slds-card slds-card_boundary inViewport forceRelatedListPreviewAdvancedGrid slds-col--padded" style="padding:10px">
+
+        <div class="slds-box" style="padding:3px">
+            <h5> <span class="slds-page-header__title slds-hyphenate" >
+                        Current Stage is <span style="color:green">{!v.currentStage}</span> and activities coming up are:
+                    </span>
+            </h5>
+            <br></br>
+            
+        	<lightning:datatable aura:id="ltngDataTable2"
+                             data="{!v.currStgActList }"
+                             columns="{!v.mycolumns2 }"
+                             keyField="Id"
+                             hideCheckboxColumn="true"
+                             onrowselection="{!c.handleSelectedRow}"
+                             onrowaction="{!c.handleRowAction}"
+                             wrapTextMaxLines="3" />
+		</div>
+        <br></br>
+        <div class="slds-box" style="padding:3px">
+            <h5> <span class="slds-page-header__title slds-hyphenate" >
+                        Next Stage is <span style="color:green">{!v.nextStage}</span> and activities coming up are: 
+                    </span>
+            </h5>
+            <br></br>
+            
+        	<lightning:datatable aura:id="ltngDataTable3"
+                             data="{!v.nextStgActList }"
+                             columns="{!v.mycolumns3 }"
+                             keyField="Id"
+                             hideCheckboxColumn="true"
+                             onrowselection="{!c.handleSelectedRow}"
+                             onrowaction="{!c.handleRowAction}"
+                             wrapTextMaxLines="3" />
+        </div>
+        <br></br>
+        <div class="slds-box" style="padding:3px">
+            <Table>
+                <TR>
+                    <TD>
+                        <span class="slds-page-header__title slds-hyphenate" >
+                        Activities by Stage
+                    	</span>(defaults to All Activities if Not Started or Completed)
+                        
+                        <div class="slds-float--right">
+                            <span>
+                                <lightning:button variant="brand" label="Mark selected In Progress" 
+                                                  title="Mark selected Complete" 
+                                                  onclick="{! c.markSelectedInProgress }" />  
+                            </span>
+                            &nbsp;
+                            <span>
+                                <lightning:button variant="brand" label="Mark selected Complete" 
+                                                  title="Mark selected Complete" 
+                                                  onclick="{! c.markSelectedComplete }" />  
+                            </span>
+                            &nbsp;
+                            <span>
+                                <lightning:button variant="brand" label="Mark selected Skip" 
+                                                  title="Mark selected Skip" 
+                                                  onclick="{! c.markSelectedSkip }" />  
+                            </span>
+                        </div>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD> 
+                        <!--label="View Activities by Stage Pick List(default All Activities)" -->
+                        <lightning:select aura:id="stagePickList" 
+                                          name="stagePickList"
+                                          onchange="{!c.onStageActivityChange}">
+                            <option value="All" text="- All Activities -" />
+                            <aura:iteration items="{!v.stagePicklistvalues}" var="pickval">
+                                <option value="{!pickval}" text="{!pickval}" selected="{!pickval == v.currentStage}" />  
+                            </aura:iteration>
+                        </lightning:select>
+                    </TD>
+                </TR>
+    
+            </Table>
+    	
+    <br></br>
+        <lightning:datatable aura:id="ltngDataTable"
+                             data="{!v.engActList }"
+                             columns="{!v.mycolumns }"
+                             keyField="Id"
+                             hideCheckboxColumn="false"
+                             onrowselection="{!c.handleSelectedRow}"
+                             onrowaction="{!c.handleRowAction}"
+                             wrapTextMaxLines="3" />
+		</div>
+	</div>
+</aura:component>

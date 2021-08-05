@@ -1,0 +1,18 @@
+<template>
+    <template if:true={modules}>
+        <lightning-card>
+        <template for:each={modules} for:item="module">
+            <div id={module.Id} key={module.Id} draggable="true" ondragstart={drag} ondragover={allowDrop} ondrop={drop}>
+                <lightning-card variant="Narrow" class="slds-card_boundary my-card" title={module.Name} icon-name="custom:custom51" key={module.Id}>
+                    <!--<lightning-button id={module.Id} label="Make First" slot="actions" onclick={makeFirst}></lightning-button>-->
+                    <p class="slds-p-horizontal_small">Must complete by: {module.Must_Complete_By__c}  |  Hours Required: {module.Hours_Required__c}</p>
+                </lightning-card>
+            </div>
+        </template>
+        <div slot="footer">
+            <lightning-button label="Previous" title="Cancel" class="slds-m-left_x-small" onclick={previousClick}></lightning-button>
+            <lightning-button label="Next" variant="brand" title="Next" class="slds-m-left_x-small" onclick={moduleSave}></lightning-button>
+        </div> 
+        </lightning-card>
+    </template>
+</template>

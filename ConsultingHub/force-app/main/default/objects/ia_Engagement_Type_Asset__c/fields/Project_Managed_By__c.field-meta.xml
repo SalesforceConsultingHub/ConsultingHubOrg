@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Managed_By__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the project leadership type this asset is limited to.  If it applies to all types, leave blank.</inlineHelpText>
+    <label>Project Managed By</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>ia_Project_Management</valueSetName>
+    </valueSet>
+</CustomField>

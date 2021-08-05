@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prior_Stages</fullName>
+    <columns>NAME</columns>
+    <columns>Phase__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>ia_Deliverable__c.Prior_Stages</value>
+    </filters>
+    <label>Prior Stages</label>
+</ListView>

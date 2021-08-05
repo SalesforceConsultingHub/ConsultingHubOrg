@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Type__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Select based on type and domain of engagement (e.g. Sales Cloud, Service Cloud, CPQ, FSL, etc.)</inlineHelpText>
+    <label>Engagement Type</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>ia_Engagement_Type__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>ia_Engagement_Type__c</referenceTo>
+    <relationshipLabel>Engagements</relationshipLabel>
+    <relationshipName>Engagement</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

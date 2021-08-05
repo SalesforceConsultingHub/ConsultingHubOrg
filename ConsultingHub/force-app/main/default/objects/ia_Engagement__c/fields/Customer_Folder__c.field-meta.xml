@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Folder__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Add hyperlinks to your IA engagement Quip and Google Drive folders</inlineHelpText>
+    <label>Customer Folder</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

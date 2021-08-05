@@ -1,0 +1,4 @@
+<aura:component >
+	<!--<c:EngageActivityComponent/>-->
+    <c:CurrentStageComponent/>
+</aura:component>

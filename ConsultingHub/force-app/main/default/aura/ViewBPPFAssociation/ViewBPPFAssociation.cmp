@@ -1,0 +1,23 @@
+<aura:component controller="MatchProductFeaturesController" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<!-- ATTRIBUTES START --> 
+    <aura:attribute name="bpId" type="String" default=""/>
+    <aura:attribute type="Business_Priority_Product_Features__c[]" name="existingAssociations" />
+    <aura:attribute name="associationsColumns" type="List" 
+                    description="The list of columns in the datatable displayed after search"/>
+    <!-- ATTRIBUTES END -->   
+    
+    <!-- HANDLERS START -->   
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- HANDLERS END -->  
+
+    <!-- DATATABLE START -->
+    <div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+        <lightning:datatable data="{! v.existingAssociations }" 
+                             columns="{! v.associationsColumns }"
+                             keyField="id" hideCheckboxColumn="true" 
+                             showRowNumberColumn="true"/>
+    </div>
+    <!-- DATATABLE END -->
+    
+</aura:component>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <logo>EarnieOnboard</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>For all IA New Hires to ramp up and get ready to deliver amazing engagements</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>IA Onboard</label>
+    <navType>Console</navType>
+    <tabs>Onboarding__c</tabs>
+    <tabs>Learning__c</tabs>
+    <tabs>Module__c</tabs>
+    <tabs>Onboarding_Domain__c</tabs>
+    <tabs>Stage_Activity__c</tabs>
+    <tabs>Stakeholder__c</tabs>
+    <tabs>RACI__c</tabs>
+    <tabs>Engagement_Activity__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>IA_Onboarding_UtilityBar</utilityBar>
+    <workspaceConfig>
+        <mappings>
+            <tab>Engagement_Activity__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Learning__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Module__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Onboarding_Domain__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Onboarding__c</tab>
+        </mappings>
+        <mappings>
+            <tab>RACI__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Stage_Activity__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Stakeholder__c</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

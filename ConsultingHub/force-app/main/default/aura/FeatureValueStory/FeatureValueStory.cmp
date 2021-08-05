@@ -1,0 +1,203 @@
+<aura:component Controller="FeatureValueStoryController"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <!-- ATTRIBUTES START --> 
+    <aura:attribute name="recordId" type="String" 
+                    description="Id of the current record"/>
+    
+    <aura:attribute name="options" type="List" default="[
+                                                        {'label': 'Engagement Value', 'value': 'option1'},
+                                                        {'label': 'Product Feature', 'value': 'option2'}
+                                                        ]"/>
+    <aura:attribute name="modeValue" type="String" default="option1"/>
+    <aura:attribute name="showBusValues" type="Boolean" />
+    <aura:attribute name="showProdFeatures" type="Boolean" />
+    
+    
+    <aura:attribute name="businessLeverOptions" type="List" default="[ ]"/>
+    <aura:attribute name="businessImpactOptions" type="List" default="[ ]"/>
+    
+    <aura:attribute type="Business_Priorities__c[]" name="businessPrioritiesList" 
+                    description="The list of Business Priorities displayed after match"/>
+    <aura:attribute name="businessPrioritiesColumns" type="List" 
+                    description="The list of columns in the datatable displayed after search"/>
+    <aura:attribute type="String[]" name="selectedBusinessPriorityIds" 
+                    description="The list of Business Priority Ids selected after match"/>    
+    
+    
+    <aura:attribute name="prodBusUnitOptions" type="List" default="[]"/>
+    <aura:attribute name="productAreaOptions" type="List" default="[ ]"/>
+    
+    <aura:attribute type="Business_Priority_Product_Features__c[]" name="productFeatureList" 
+                    description="The list of Product Features displayed after match"/>
+    <aura:attribute type="Product_Feature__c[]" name="productFeatureList2" 
+                    description="The list of Product Features displayed after match"/>
+    <aura:attribute name="productFeatureColumns" type="List" 
+                    description="The list of columns in the datatable displayed after search"/>
+    <aura:attribute type="String[]" name="selectedProductFeatureIds" 
+                    description="The list of Product Feature Ids selected after match"/>
+    
+    <aura:attribute name="showDatatables" type="Boolean" default="false"
+                    description="Controls the visibility of datatables"/>
+    
+    <aura:attribute name="disableChildPicklist" type="Boolean" default="true"
+                    description="Controls the child picklist selection"/>
+    
+    <aura:attribute name="showLoader" type="Boolean" default="false"
+                    description="Controls the loader"/>
+    <!-- ATTRIBUTES END -->   
+    
+    <!-- HANDLERS START -->   
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- HANDLERS END -->  
+    
+    <lightning:notificationsLibrary aura:id="notifLib"/> 
+    
+    
+    <div class="slds-card slds-card_boundary inViewport forceRelatedListPreviewAdvancedGrid slds-col--padded" style="padding:10px">
+        <div class="slds-page-header__name">
+            <div class="slds-page-header__name-title">
+                <h5>
+                    <span class="slds-page-header__title slds-hyphenate" 
+                          title="Start your Feature - Value Story">
+                        Start your Feature - Value Story
+                    </span>
+                </h5>
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-wrap slds-grid--pull-padded slds-m-top_small">
+            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+                <lightning:radioGroup name="radioButtonGroup"
+                                      options="{! v.options }"
+                                      value="{! v.modeValue }"
+                                      type="button" onchange="{!c.handleModeChange}"/>
+            </div>
+        </div>       
+        
+        <div class="slds-grid slds-wrap slds-grid--pull-padded slds-m-top_small">
+            <!-- BUSINESS PRIORITY SECTION START --> 
+            <aura:if isTrue="{! v.modeValue == 'option1' }">
+                <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                    <lightning:combobox name="businessPriority" label="Business Value Lever" placeholder="Select Business Value Lever" 
+                                        options="{! v.businessLeverOptions }" onchange="{! c.handleBusinessValueLeverChange }"
+                                        aura:id="businessValueLeverCombobox"/>
+                </div>
+                <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                    <lightning:combobox name="businessImpact" label="Business Impact" placeholder="Select Business Impact" 
+                                        options="{! v.businessImpactOptions }" onchange="{! c.handleBusinessImpactChange }"
+                                        aura:id="businessImpactCombobox" disabled="{!v.disableChildPicklist}"/>
+                </div>
+                
+                <aura:if isTrue="{! v.showDatatables }">
+                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+                        
+                        <!-- DATATABLE START -->
+                        <div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+                            <lightning:datatable data="{! v.businessPrioritiesList }" columns="{! v.businessPrioritiesColumns }"
+                                                 keyField="id" hideCheckboxColumn="false" 
+                                                 onrowselection="{! c.updateSelectedBusinessPriorities }"
+                                                 aura:id ="BusinessPrioritiesDatatable"/>
+                        </div>
+                        <!-- DATATABLE END -->
+                        
+                    </div>
+                    
+                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 slds-m-top_small">
+                    	<div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+                        	<div class="slds-text-heading_small">Suggested Product Features</div>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+                        
+                        <!-- DATATABLE START -->
+                        <div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+                            <lightning:datatable data="{! v.productFeatureList }" columns="{! v.productFeatureColumns }"
+                                                 keyField="id" hideCheckboxColumn="false" 
+                                                 onrowselection="{! c.updateSelectedProductFeatures }"
+                                                 aura:id ="prodFeaturesDatatable"/>
+                        </div>
+                        <!-- DATATABLE END -->
+                        
+                    </div>
+                    
+                    
+                    <div class="slds-m-top_small slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 slds-align_absolute-center">
+                        <span>
+                            <lightning:button variant="brand" label="Add Selected Business Priorities and Product Features" 
+                                              title="Add Selected Engagement Values and Product Features" 
+                                              onclick="{! c.handleAssociation }" />  
+                        </span>
+                    </div>
+                </aura:if>
+            </aura:if>
+            <!-- BUSINESS PRIORITY SECTION END -->
+            
+            
+            <!-- PRODUCT FEATURE SECTION START -->
+            <aura:if isTrue="{! v.modeValue == 'option2' }">
+                <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                    <lightning:combobox name="prodBusUnit" label="Product Business Unit" placeholder="Select Product Business Unit" 
+                                        options="{! v.prodBusUnitOptions }" onchange="{! c.handleProdBusUnitChange }" 
+                                        aura:id="prodBusUnitCombobox"/> 
+                    
+                </div>
+                <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                    <lightning:combobox name="prodArea" label="Product Area" placeholder="Select Product Area" 
+                                        options="{! v.productAreaOptions }" onchange="{! c.handleProductAreaChange }" 
+                                        aura:id="prodAreaCombobox" disabled="{!v.disableChildPicklist}"/>            
+                </div>
+                
+                <aura:if isTrue="{! v.showDatatables }">
+                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+                        
+                        <!-- DATATABLE START -->
+                        <div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+                            <lightning:datatable data="{! v.productFeatureList2 }" columns="{! v.productFeatureColumns }"
+                                                 keyField="id" hideCheckboxColumn="false" 
+                                                 onrowselection="{! c.updateSelectedProductFeatures }"
+                                                 aura:id ="prodFeaturesDatatable"/>
+                        </div>
+                        <!-- DATATABLE END -->
+                        
+                    </div>
+                    
+                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 slds-m-top_small">
+   						<div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+                        	<div class="slds-text-heading_small">Suggested Engagement Values</div>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+                        
+                        <!-- DATATABLE START -->
+						<div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+                            <lightning:datatable data="{! v.businessPrioritiesList }" columns="{! v.businessPrioritiesColumns }"
+                                                 keyField="id" hideCheckboxColumn="false" 
+                                                 onrowselection="{! c.updateSelectedBusinessPriorities }"
+                                                 aura:id ="BusinessPrioritiesDatatable"/>
+                        </div>
+                        <!-- DATATABLE END -->
+                        
+                    </div>
+                    
+                    
+                    <div class="slds-m-top_small slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 slds-align_absolute-center">
+                        <span>
+                            <lightning:button variant="brand" label="Add Selected Product Features and Business Priorities" 
+                                              title="Add Selected Product Features and Engagement Values" 
+                                              onclick="{! c.handleAssociation }" />  
+                        </span>
+                    </div>
+                </aura:if>
+            </aura:if>
+            <!-- PRODUCT FEATURE SECTION END -->
+            
+            
+            <aura:if isTrue="{! v.showLoader }">
+                <lightning:spinner alternativeText="Loading" size="medium" />
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

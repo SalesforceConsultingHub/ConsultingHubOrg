@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accessibility__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Admin &amp; Developer Tools</fullName>
+                <default>false</default>
+                <label>Admin &amp; Developer Tools</label>
+            </value>
+            <value>
+                <fullName>Connected App</fullName>
+                <default>false</default>
+                <label>Connected App</label>
+            </value>
+            <value>
+                <fullName>Data Cleansing</fullName>
+                <default>false</default>
+                <label>Data Cleansing</label>
+            </value>
+            <value>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+                <label>Data Management</label>
+            </value>
+            <value>
+                <fullName>Document Management</fullName>
+                <default>false</default>
+                <label>Document Management</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>IT Management</fullName>
+                <default>false</default>
+                <label>IT Management</label>
+            </value>
+            <value>
+                <fullName>Product Feature</fullName>
+                <default>false</default>
+                <label>Product Feature</label>
+            </value>
+            <value>
+                <fullName>Productivity</fullName>
+                <default>false</default>
+                <label>Productivity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

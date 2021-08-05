@@ -1,0 +1,178 @@
+<aura:component controller="MatchProductFeaturesController" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" >
+    
+    <!-- ATTRIBUTES START -->  
+    <aura:attribute name="businessPriorityValues" type="List" default="[]"
+                    description="Picklist values for Business Priority"/>
+    <aura:attribute name="productFeatureValues" type="List" default="[]"
+                    description="Picklist values for Product Features"/>
+    
+    <aura:attribute name="selectedBusinessPriority" type="String" default=""/>
+    <aura:attribute name="selectedProductFeature" type="String" default=""/>
+    
+    <aura:attribute type="Business_Priorities__c[]" name="businessPrioritiesList" 
+                    description="The list of Business Priorities displayed after match"/>
+    <aura:attribute type="Business_Priorities__c[]" name="businessPrioritiesListOriginal" 
+                    description="The list of Business Priorities displayed after match"/>
+    <aura:attribute name="businessPrioritiesColumns" type="List" 
+                    description="The list of columns in the datatable displayed after search"/>
+    <aura:attribute name="businessPrioritiesListSize" type="Integer" default="0"
+                    description="This attribute is used to display the count of records found in the search."/>
+    <aura:attribute name="selectedBusinessPrioritiesRowsCount" type="Integer" default="0"/>
+    <aura:attribute type="String[]" name="selectedBusinessPriorityIds" 
+                    description="The list of Business Priority Ids selected after match"/>
+    
+    <aura:attribute type="Product_Feature__c[]" name="productFeatureList" 
+                    description="The list of Product Features displayed after match"/>
+    <aura:attribute type="Product_Feature__c[]" name="productFeatureListOriginal" 
+                    description="The list of Product Features displayed after match"/>
+    <aura:attribute name="showAllFeatures" type="Boolean" default="false"
+                    description="If true, fetches all product features"/>
+    <aura:attribute name="productFeatureColumns" type="List" 
+                    description="The list of columns in the datatable displayed after search"/>
+    <aura:attribute name="productFeatureListSize" type="Integer" default="0"
+                    description="This attribute is used to display the count of records found in the search."/>
+    <aura:attribute name="selectedProductFeatureRowsCount" type="Integer" default="0"/>
+    <aura:attribute type="String[]" name="selectedProductFeatureIds" 
+                    description="The list of Product Feature Ids selected after match"/>
+    
+    <aura:attribute name="showLoader" type="Boolean" default="false"
+                    description="Controls the loader"/>
+    <!-- ATTRIBUTES END -->   
+    
+    <!-- HANDLERS START -->   
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- HANDLERS END -->  
+
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <aura:html tag="style">
+       .slds-modal__container{ 
+         	height : auto; 
+        	width: 1000px !important; 
+        	max-width: initial !important; 
+       } 
+       
+       .slds-modal__footer{ 
+         display: inline !important; 
+       }
+    </aura:html>
+    <!-- SEARCH SECTION START -->
+    <div aura:id ="searchSection">
+        
+        
+        <lightning:card title="Match Business Priorities with Product Features" class="slds-card">
+            <lightning:overlayLibrary aura:id="overlayLib"/>
+
+            <form>
+                <!-- SEARCH FIELDS START -->
+                <!-- This section shows all the search fields -->
+                <div class="slds-col--padded slds-size--1-of-1">
+                    <div class="slds-grid slds-wrap slds-grid--pull-padded">
+                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                            
+                            <lightning:select name="BusinessPriority"
+                                              aura:id="businessPriorityCombobox"
+                                              label="Business Priority - VCM Clouds"
+                                              onchange="{! c.handleChangeBusinessPriority }">
+                                <aura:iteration items="{!v.businessPriorityValues}" var="val">
+                                    <option value="{!val.values}" selected="{!val.selected}">{!val.label}</option>
+                                </aura:iteration>
+                            </lightning:select>
+                            
+                        </div>
+                        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                            
+                            <!--<lightning:select name="ProductFeature"
+                                              aura:id="productFeatureCombobox"
+                                              label="Product Feature"
+                                              onchange="{! c.handleChangeProductFeature }">
+                                <aura:iteration items="{!v.productFeatureValues}" var="val">
+                                    <option value="{!val.values}" selected="{!val.selected}">{!val.label}</option>
+                                </aura:iteration>
+                            </lightning:select>-->
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- SEARCH FIELDS END -->
+            </form>
+        </lightning:card>
+        
+        <lightning:card title="Business Priorities" class="slds-card">
+                
+                <!--<div class="slds-m-top_x-small">
+                    <lightning:input onchange="{!c.searchTableBusinessPriority}" 
+                                     type="search" label="Search" 
+                                     variant="label-hidden" placeholder="Search Business Priorities" aura:id="SearchBox"/>
+                </div>-->
+                <div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1 " >
+                    <aura:if isTrue="{!v.businessPrioritiesListSize}">
+                        Total: {!v.businessPrioritiesListSize} | Selected: {! v.selectedBusinessPrioritiesRowsCount }
+                    </aura:if>	
+                </div>
+            <!-- DATATABLE START -->
+            <div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+                <lightning:datatable data="{! v.businessPrioritiesList }" columns="{! v.businessPrioritiesColumns }"
+                                     keyField="id" hideCheckboxColumn="false" 
+                                     showRowNumberColumn="true"
+                                     onrowselection="{! c.updateSelectedBusinessFeaturesCount }"
+                                     aura:id ="BusinessPrioritiesDatatable" 
+                                     onrowaction="{! c.handleRowAction }"/>
+            </div>
+            <!-- DATATABLE END -->
+            <!-- Show loader during the an action execution -->
+            <aura:if isTrue="{! v.showLoader }">
+                <lightning:spinner alternativeText="Loading" size="medium" />
+            </aura:if>
+        </lightning:card>
+        
+        
+        <lightning:card title="Product Features" class="slds-card">
+            
+            <div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+                <aura:if isTrue="{!v.productFeatureListSize}">
+                    This list is filtered based on text matches with the selected VCM Cloud. 
+                    <lightning:input type="toggle" label="Show All Product Features" name="ShowAllFeatures" checked="{!v.showAllFeatures}" onchange="{! c.showAllProductFeatures }"/>
+                </aura:if>	
+            </div>
+            
+            <div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+                <aura:if isTrue="{!v.productFeatureListSize}">
+                    Total: {!v.productFeatureListSize} | Selected: {! v.selectedProductFeatureRowsCount }
+                </aura:if>	
+            </div>
+            
+            
+            <!-- DATATABLE START -->
+            <div class="slds-m-top_x-small slds-col--padded slds-size--1-of-1">
+                <lightning:datatable data="{! v.productFeatureList }" columns="{! v.productFeatureColumns }"
+                                     keyField="id" hideCheckboxColumn="false" 
+                                     showRowNumberColumn="true"
+                                     onrowselection="{! c.updateSelectedProductFeatureCount }"
+                                     aura:id ="productFeatureDatatable" />
+            </div>
+            <!-- DATATABLE END -->
+            
+            <!-- Show loader during the an action execution -->
+            <aura:if isTrue="{! v.showLoader }">
+                <lightning:spinner alternativeText="Loading" size="medium" />
+            </aura:if>
+        </lightning:card>
+        
+        <lightning:card title="" class="slds-card">
+            <div class="slds-m-top_xx-small slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 slds-align_absolute-center">
+                <span>
+                    <lightning:button variant="brand" label="Associate Selected Business Priorities and Product Features" title="Associate" onclick="{! c.handleAssociation }" />  
+                </span>
+            </div>
+        </lightning:card>
+        
+
+        
+    </div>
+    
+    <!-- SEARCH SECTION END-->
+   
+    
+</aura:component>

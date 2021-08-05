@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Preview Of Sorted Modules" icon-name="custom:custom51">
+        <template if:true={modules}>
+            <lightning-datatable
+              key-field="Id"
+              hide-checkbox-column
+              show-row-number-column
+              data={modules}
+              columns={columns}
+            >
+            </lightning-datatable>
+        </template>
+        <template if:false={modules}>
+            <h1>No Modules Found</h1>
+        </template>
+    </lightning-card>
+</template>

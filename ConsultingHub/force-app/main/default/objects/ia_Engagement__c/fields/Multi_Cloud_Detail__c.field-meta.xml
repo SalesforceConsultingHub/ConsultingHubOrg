@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Multi_Cloud_Detail__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter details regarding customer landscape if using multiple Salesforce clouds</inlineHelpText>
+    <label>Multi Cloud Detail</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

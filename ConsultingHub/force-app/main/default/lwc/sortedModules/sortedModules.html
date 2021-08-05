@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Modules" icon-name="custom:custom51">
+        <template if:true={modules}>
+          <div style="height:500px">
+            <lightning-datatable
+              key-field="Id"
+              hide-checkbox-column
+              show-row-number-column
+              data={modules}
+              columns={columns}
+            >
+            </lightning-datatable>
+          </div>
+        </template>
+        <template if:false={modules}>
+            <h1>No Modules Found</h1>
+        </template>
+    </lightning-card>
+</template>

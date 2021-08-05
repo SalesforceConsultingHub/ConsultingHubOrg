@@ -1,0 +1,60 @@
+<!--<template>
+    <h2> LWC - Engagement Activity Datatable</h2>
+    <template if:true={engActList}>
+        <lightning-datatable data={engActList} columns={columns} key-field="Id">
+        </lightning-datatable>
+
+
+    </template>
+    <template if:true={error}>
+        {error}
+    </template>
+</template>
+working --> 
+
+
+<template>
+    <lightning-card title="Iterate Map Values Demo - NOT WORKING">
+        <template if:true={engActMapOfListValues}>
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_col-bordered">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div title="Key">Phase</div>
+                        </th>
+                        <th scope="col">
+                            <div title="Value">Activity (List Values)</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={engActMapOfListValues} for:item="keyValue">
+                        <tr key={keyValue.key}>
+                            <th scope="col">
+                                <div>{keyValue.key}</div>
+                            </th>
+                            <!-- <template for:each={keyValue.value} for:item="value">
+                                <div key={value}>
+                                    <b>{value}</b><br/>
+                                </div>
+                            </template> -->
+                            <template for:each={engActMapOfListValues} for:item="sobjType">
+                                <template for:each={sobjType.value} for:item="sobjRow">
+                                <tr key={sobjRow.Id}>
+                                 <td width="200px">
+                                   <div title={sobjRow.Activity_Description__c}>{sobjRow.Activity_Description__c}</div>
+                                 </td>
+                                 <td width="100px">
+                                    <div title={sobjRow.Status_Formula__c}>{sobjRow.Status_Formula__c}</div>
+                                  </td>
+                                 <!-- other TDs with other values -->
+                               </tr>
+                             </template>
+                             </template>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+    </lightning-card>
+</template>

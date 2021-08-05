@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Percent_Learning_Complete__c</fullName>
+    <description>Percentage of Allocated Learning Hours which are Completed</description>
+    <externalId>false</externalId>
+    <formula>(Total_Actual_Time_Spent_Hours__c / Total_Estimated_Time_Required_Hours__c )*100</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Percent Learning Complete</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

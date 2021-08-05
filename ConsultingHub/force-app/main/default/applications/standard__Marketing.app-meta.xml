@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-UserProfile</tabs>
+    <tabs>standard-CollaborationGroup</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>ia_Engagement_Type__c</tabs>
+    <tabs>ia_Phase__c</tabs>
+    <tabs>ia_Engagement__c</tabs>
+    <tabs>ia_Deliverable__c</tabs>
+    <tabs>ia_Engagement_Value__c</tabs>
+    <tabs>Product_Feature__c</tabs>
+    <tabs>Stage_Activity__c</tabs>
+    <tabs>Stakeholder__c</tabs>
+    <tabs>RACI__c</tabs>
+    <tabs>Engagement_Activity__c</tabs>
+    <uiType>Aloha</uiType>
+</CustomApplication>

@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<iframe class="vidyard_iframe" src="//play.vidyard.com/mj8WZbfnBnW39DGuDNe7QZ.html?v=3.1.1" width="450" height="300" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+</aura:component>

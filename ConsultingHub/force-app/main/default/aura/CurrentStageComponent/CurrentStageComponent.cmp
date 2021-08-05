@@ -1,0 +1,40 @@
+<aura:component controller="EngageActivityController" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" >
+
+    <aura:handler event="c:RefreshCurrentStageCompEvent" action="{!c.handleApplicationEvent}"/>
+    
+	<aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="currentStage" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <br/>
+	
+	<div class="slds-card slds-card_boundary inViewport forceRelatedListPreviewAdvancedGrid slds-col--padded" style="padding:10px">
+        <div class="slds-page-header__name">
+            <div class="slds-page-header__name-title">
+                <h5>
+                    <span class="slds-page-header__title" 
+                          title="Engagement Activity">
+                        Engagement Activity Status/Current Stage
+                    </span>
+                </h5>
+            </div>
+        </div>
+        <div>
+            <br></br>
+            <Table>
+                <TR>
+                    <TD>
+                        <div class="slds-align_absolute-center slds-text-heading_large">
+                            
+                                <p>  {!v.currentStage} </p>
+                            
+                        </div>
+                    </TD>
+                </TR>
+            </Table>
+		</div>
+    </div>
+</aura:component>

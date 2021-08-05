@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre- Discovery</fullName>
+                <default>false</default>
+                <label>Pre- Discovery</label>
+            </value>
+            <value>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+                <label>Discovery</label>
+            </value>
+            <value>
+                <fullName>Create Plan</fullName>
+                <default>false</default>
+                <label>Create Plan</label>
+            </value>
+            <value>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+                <label>Implementation</label>
+            </value>
+            <value>
+                <fullName>Measure</fullName>
+                <default>false</default>
+                <label>Measure</label>
+            </value>
+            <value>
+                <fullName>Adapt</fullName>
+                <default>false</default>
+                <label>Adapt</label>
+            </value>
+            <value>
+                <fullName>Internal Account Collaboration</fullName>
+                <default>false</default>
+                <label>Internal Account Collaboration</label>
+            </value>
+            <value>
+                <fullName>Create Roadmap</fullName>
+                <default>false</default>
+                <label>Create Roadmap</label>
+            </value>
+            <value>
+                <fullName>Transition</fullName>
+                <default>false</default>
+                <label>Transition</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Prepare</controllingFieldValue>
+            <valueName>Pre- Discovery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prepare</controllingFieldValue>
+            <valueName>Discovery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prepare</controllingFieldValue>
+            <valueName>Create Plan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Execute</controllingFieldValue>
+            <valueName>Implementation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Execute</controllingFieldValue>
+            <valueName>Measure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Execute</controllingFieldValue>
+            <valueName>Adapt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Close</controllingFieldValue>
+            <valueName>Internal Account Collaboration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Close</controllingFieldValue>
+            <valueName>Create Roadmap</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Close</controllingFieldValue>
+            <valueName>Transition</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

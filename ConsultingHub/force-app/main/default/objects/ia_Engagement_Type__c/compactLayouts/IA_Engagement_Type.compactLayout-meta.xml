@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Engagement_Type</fullName>
+    <fields>Name</fields>
+    <fields>Domain__c</fields>
+    <fields>Type__c</fields>
+    <label>IA Engagement Type</label>
+</CompactLayout>
