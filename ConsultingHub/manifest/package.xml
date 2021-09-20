@@ -2,59 +2,28 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>Contact</members>
-        <members>*</members>
+        <members>Onboarding__c</members>
+        <members>Domain_Relationship__c</members>
         <name>CustomObject</name>
     </types>
     <types>
-        <members>*</members>
-        <name>CustomApplication</name>
-    </types>
-    <types>
-        <members>*</members>
+        <members>Onboarding_Record_Page2</members>
+        <members>Onboarding_Domain_Record_Page</members>
         <name>FlexiPage</name>
     </types>
     <types>
-        <members>*</members>
-        <name>CustomTab</name>
+        <members>Onboarding__c-Onboarding Layout</members>
+        <members>Contact-Contact Layout</members>
+        <members>Domain_Relationship__c-Domain Relationship Layout</members>
+        <name>Layout</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>LightningComponentBundle</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>StaticResource</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Flow</name>
+        <members>Onboarding_Administrator</members>
+        <name>PermissionSet</name>
     </types>
     <types>
         <members>Admin</members>
+        <members>Consultant</members>
         <name>Profile</name>
     </types>
     <version>52.0</version>

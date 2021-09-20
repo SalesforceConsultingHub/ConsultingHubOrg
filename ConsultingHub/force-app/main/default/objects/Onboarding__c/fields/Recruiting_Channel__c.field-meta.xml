@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recruiting_Channel__c</fullName>
+    <externalId>false</externalId>
+    <label>Recruiting Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pathfinder</fullName>
+                <default>false</default>
+                <label>Pathfinder</label>
+            </value>
+            <value>
+                <fullName>HBCU</fullName>
+                <default>false</default>
+                <label>HBCU</label>
+            </value>
+            <value>
+                <fullName>External</fullName>
+                <default>false</default>
+                <label>External</label>
+            </value>
+            <value>
+                <fullName>NAACP</fullName>
+                <default>false</default>
+                <label>NAACP</label>
+            </value>
+            <value>
+                <fullName>RM App</fullName>
+                <default>false</default>
+                <label>RM App</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Recruiting Event</fullName>
+                <default>false</default>
+                <label>Recruiting Event</label>
+            </value>
+            <value>
+                <fullName>NBSE</fullName>
+                <default>false</default>
+                <label>NBSE</label>
+            </value>
+            <value>
+                <fullName>Per Scholas</fullName>
+                <default>false</default>
+                <label>Per Scholas</label>
+            </value>
+            <value>
+                <fullName>PepUp Tech</fullName>
+                <default>false</default>
+                <label>PepUp Tech</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
