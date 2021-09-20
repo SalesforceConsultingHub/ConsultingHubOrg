@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Group__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity Group</label>
+    <referenceTo>Activity_Group__c</referenceTo>
+    <relationshipLabel>Enablement Activities</relationshipLabel>
+    <relationshipName>Enablement_Activities</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

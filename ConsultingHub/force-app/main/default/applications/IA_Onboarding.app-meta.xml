@@ -12,6 +12,38 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>IA Onboard</label>
     <navType>Console</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Activity_Group_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Activity_Group__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Activity_Group_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Activity_Group__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Consultant</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Enablement_Activity_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Enablement_Activity__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Consultant</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Enablement_Activity_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Enablement_Activity__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
     <tabs>Onboarding__c</tabs>
     <tabs>Learning__c</tabs>
     <tabs>Module__c</tabs>
@@ -20,11 +52,33 @@
     <tabs>Stakeholder__c</tabs>
     <tabs>RACI__c</tabs>
     <tabs>Engagement_Activity__c</tabs>
+    <tabs>Consulting_Hub_Certification__c</tabs>
+    <tabs>Exam__c</tabs>
+    <tabs>Section__c</tabs>
+    <tabs>Section_Score__c</tabs>
+    <tabs>Exam_Attempt__c</tabs>
+    <tabs>Enablement_Activity__c</tabs>
+    <tabs>Activity_Group__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>IA_Onboarding_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
+            <tab>Activity_Group__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Consulting_Hub_Certification__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Enablement_Activity__c</tab>
+        </mappings>
+        <mappings>
             <tab>Engagement_Activity__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Exam_Attempt__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Exam__c</tab>
         </mappings>
         <mappings>
             <tab>Learning__c</tab>
@@ -40,6 +94,12 @@
         </mappings>
         <mappings>
             <tab>RACI__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Section_Score__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Section__c</tab>
         </mappings>
         <mappings>
             <tab>Stage_Activity__c</tab>
