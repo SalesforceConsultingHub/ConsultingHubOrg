@@ -40,6 +40,11 @@
     <tabs>Stakeholder__c</tabs>
     <tabs>RACI__c</tabs>
     <tabs>Engagement_Activity__c</tabs>
+    <tabs>Consulting_Hub_Certification__c</tabs>
+    <tabs>Exam__c</tabs>
+    <tabs>Section__c</tabs>
+    <tabs>Section_Score__c</tabs>
+    <tabs>Exam_Attempt__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>IA_Engage_UtilityBar</utilityBar>
 </CustomApplication>

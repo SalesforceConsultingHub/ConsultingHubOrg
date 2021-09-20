@@ -42,15 +42,35 @@
     <tabs>ia_Asset__c</tabs>
     <tabs>ia_Engagement_Value__c</tabs>
     <tabs>Product_Feature__c</tabs>
+    <tabs>Consulting_Hub_Certification__c</tabs>
+    <tabs>Exam__c</tabs>
+    <tabs>Section__c</tabs>
+    <tabs>Section_Score__c</tabs>
+    <tabs>Exam_Attempt__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>IA_App_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>Consulting_Hub_Certification__c</tab>
+        </mappings>
         <mappings>
             <fieldName>Engagement__c</fieldName>
             <tab>Engagement_Activity__c</tab>
         </mappings>
         <mappings>
+            <tab>Exam_Attempt__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Exam__c</tab>
+        </mappings>
+        <mappings>
             <tab>Product_Feature__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Section_Score__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Section__c</tab>
         </mappings>
         <mappings>
             <tab>Stage_Activity__c</tab>
